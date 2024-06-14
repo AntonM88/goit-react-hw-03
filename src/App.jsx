@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ContactList, SearchBox, ContactForm } from "./components";
 import { nanoid } from "nanoid";
 const userData = [
@@ -9,10 +9,15 @@ const userData = [
 ];
 
 const App = () => {
-  const [users, setUsers] = useState(
-    userData
-    // () => JSON.parse(window.localStorage.getItem("users")) || userData
-  );
+  const [users, setUsers] = useState(() => {
+    const savedUsers = JSON.parse(localStorage.getItem("users"));
+    return savedUsers || userData;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("users", JSON.stringify(users));
+  }, [users]);
+
   const [searchValue, setSearchValue] = useState("");
 
   const createUser = (name, number) => {
