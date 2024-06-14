@@ -34,7 +34,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-body {
+/* body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #fbfcdb;
 }
@@ -43,10 +43,4 @@ section {
   flex-direction: column;
   gap: 20px;
   padding-left: 20px;
-}
-.text_stab {
-  font-size: 30px;
-  font-weight: 700;
-  color: #175e59;
-  margin: 0 auto;
-}
+} */

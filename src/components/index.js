@@ -1,4 +1,4 @@
-export * from "./Description/Description";
-export * from "./Options/Options";
-export * from "./Feedback/Feedback";
-// export * from './data/'
+export * from "./ContactForm/ContactForm";
+export * from "./SearchBox/SearchBox";
+export * from "./ContactList/ContactList";
+export * from "./Contact/Contact";
